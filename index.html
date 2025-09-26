@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Beautiful</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="audio/until-i-found-you.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-toggle">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navigation" id="navigation">
+        <div class="nav-items">
+            <button class="nav-btn" data-section="landing">Home</button>
+            <button class="nav-btn" data-section="poem">Poem</button>
+            <button class="nav-btn" data-section="about">About</button>
+            <button class="nav-btn" data-section="gallery">Gallery</button>
+            <button class="nav-btn" data-section="testimonials">Testimonials</button>
+            <button class="nav-btn" data-section="video">Video</button>
+            <button class="nav-btn" data-section="final">Message</button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        
+        <!-- Landing Section -->
+        <section id="landing" class="section active">
+            <div class="landing-content">
+                <h1 class="main-title">Happy Birthday</h1>
+                <h2 class="sub-title">Beautiful Soul</h2>
+                <p class="landing-description">Today we celebrate you and all the joy you bring to the world</p>
+                <button id="beginBtn" class="begin-btn">
+                    <span>Click to Begin</span>
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+            
+            <!-- Birthday Animation Container -->
+            <div id="birthdayAnimation" class="birthday-animation hidden">
+                <div class="cake-container">
+                    <div class="birthday-cake">
+                        <div class="cake-base"></div>
+                        <div class="cake-middle"></div>
+                        <div class="cake-top"></div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="typewriterMessage" class="typewriter-message"></div>
+            </div>
+            
+            <!-- Falling Petals Container -->
+            <div id="petalsContainer" class="petals-container"></div>
+        </section>
+
+        <!-- Poem Section -->
+        <section id="poem" class="section">
+            <div class="candles-background">
+                <div class="candle-item" style="left: 10%; animation-delay: 0s;"></div>
+                <div class="candle-item" style="left: 25%; animation-delay: 1s;"></div>
+                <div class="candle-item" style="left: 75%; animation-delay: 2s;"></div>
+                <div class="candle-item" style="left: 90%; animation-delay: 1.5s;"></div>
+            </div>
+            <div class="content-container">
+                <h2 class="section-title">A Poem for You</h2>
+                <div class="poem-content">
+                    <div class="poem-stanza">
+                        <p>On this special day of yours,</p>
+                        <p>When celebration fills the air,</p>
+                        <p>I want you to know how much</p>
+                        <p>Your presence means beyond compare.</p>
+                    </div>
+                    <div class="poem-stanza">
+                        <p>Like flowers that bloom in spring,</p>
+                        <p>You bring beauty to each day,</p>
+                        <p>With kindness that knows no bounds</p>
+                        <p>And a smile that lights the way.</p>
+                    </div>
+                    <div class="poem-stanza">
+                        <p>May this year bring you joy,</p>
+                        <p>Adventures new and dreams come true,</p>
+                        <p>For someone as wonderful</p>
+                        <p>Deserves nothing less than you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="content-container">
+                <h2 class="section-title">About This Amazing Person</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Academic Excellence</h3>
+                        <p>Graduated with honors and continues to pursue knowledge with passion and dedication.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Compassionate Leader</h3>
+                        <p>Always puts others first and leads with empathy, making everyone feel valued and heard.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Creative Innovator</h3>
+                        <p>Brings fresh perspectives and creative solutions to every challenge with enthusiasm.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community Builder</h3>
+                        <p>Brings people together and creates meaningful connections wherever she goes.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Inspiring Mentor</h3>
+                        <p>Guides and motivates others to reach their full potential with patience and wisdom.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>World Changer</h3>
+                        <p>Makes a positive impact in everything she does, leaving the world better than she found it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <div class="content-container">
+                <h2 class="section-title">Beautiful Memories</h2>
+                <div class="gallery-grid">
+                    <div class="polaroid-card">
+                        <div class="polaroid-image">
+                            <img src="https://pixabay.com/get/ga8b81baab4d7d60dfbe280c9195f314d349879c66f678bfdf5695ad5477f6d1006ec38c4810047d89675b1eb1fcb74b474111882b817e1a73bc5e92556e96c72_1280.jpg" alt="Memory 1">
+                        </div>
+                        <div class="polaroid-caption">Special Moment 1</div>
+                    </div>
+                    <div class="polaroid-card">
+                        <div class="polaroid-image">
+                            <img src="https://pixabay.com/get/g8e7dd7d26ee0ec3798d3dccd5a1439a4f87c786b8009dc55c920851a6f6c789cdce537edb72de9d037335f6895d6da18c1c8744bcc8b8fc3b8c5769916d28c01_1280.jpg" alt="Memory 2">
+                        </div>
+                        <div class="polaroid-caption">Beautiful Day</div>
+                    </div>
+                    <div class="polaroid-card">
+                        <div class="polaroid-image">
+                            <img src="https://pixabay.com/get/ge7e3b88d07f81826a7980f9f783b957cca5aceea12df72cfa55f9c1e7461a8e53b3205ed7a960cd407a310df03fa73fd903ad3237fd7d115a127c49cf9f470ee_1280.jpg" alt="Memory 3">
+                        </div>
+                        <div class="polaroid-caption">Cherished Memory</div>
+                    </div>
+                    <div class="polaroid-card">
+                        <div class="polaroid-image">
+                            <img src="https://pixabay.com/get/gf5d89bb4b63813451add5dacc6d8d97a0a5dc74b6de40434b77c17a9c8251847ab473d8c6be1a15333faf5f437db4b76ff86eae234a0dd91f1cf34294f9912e7_1280.jpg" alt="Memory 4">
+                        </div>
+                        <div class="polaroid-caption">Happy Times</div>
+                    </div>
+                    <div class="polaroid-card">
+                        <div class="polaroid-image">
+                            <img src="https://pixabay.com/get/gfa7e75df2b216034926583e3c17167dcd705b50613f562a713f6ba170981433c4d7b72e320c68a87c27de73e7e5331468516b6e695edd204ea790a31482b1966_1280.jpg" alt="Memory 5">
+                        </div>
+                        <div class="polaroid-caption">Precious Moment</div>
+                    </div>
+                    <div class="polaroid-card">
+                        <div class="polaroid-image">
+                            <img src="https://pixabay.com/get/g37144baacf961f5765b196ce04047c16ab6ad21488d3e4f7e9db1b9e6922cde7c865f334c66326c509e411939e3911abf1496fcafe78cbc56fa316a2d12c2efc_1280.jpg" alt="Memory 6">
+                        </div>
+                        <div class="polaroid-caption">Unforgettable</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="content-container">
+                <h2 class="section-title">What People Say</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <div class="speech-bubble">
+                            <p>"She has the most beautiful heart and always knows how to make everyone feel special. Her kindness is truly inspiring."</p>
+                            <div class="bubble-arrow"></div>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah M.</h4>
+                                <span>Best Friend</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="speech-bubble">
+                            <p>"An amazing person who lights up every room she enters. Her positive energy is contagious and her smile can brighten anyone's day."</p>
+                            <div class="bubble-arrow"></div>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael R.</h4>
+                                <span>Colleague</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="speech-bubble">
+                            <p>"She's the kind of person who makes you believe in the goodness of humanity. Her compassion and wisdom have guided me through tough times."</p>
+                            <div class="bubble-arrow"></div>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Emma L.</h4>
+                                <span>Mentee</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="speech-bubble">
+                            <p>"Her creativity and passion for life inspire everyone around her. She has a gift for seeing beauty in everything and sharing that vision with others."</p>
+                            <div class="bubble-arrow"></div>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>David K.</h4>
+                                <span>Family Friend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="section">
+            <div class="content-container">
+                <h2 class="section-title">A Special Message</h2>
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <p>Video placeholder - Replace with actual birthday video</p>
+                        <small>Click to play when video is added</small>
+                    </div>
+                    <!-- Uncomment when actual video is available -->
+                    <!-- <iframe src="your-video-url" frameborder="0" allowfullscreen></iframe> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Message Section -->
+        <section id="final" class="section">
+            <div class="content-container">
+                <h2 class="section-title">Happy Birthday!</h2>
+                <div class="final-message">
+                    <div class="message-content">
+                        <p class="main-message">Thank you for being such an incredible person and bringing so much joy to everyone around you.</p>
+                        <p class="sub-message">May this new year of your life be filled with endless happiness, beautiful moments, and all your dreams coming true.</p>
+                        <p class="signature">With love and best wishes,<br><em>Your Loved Ones</em></p>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="restartBtn" class="action-btn">
+                            <i class="fas fa-redo"></i>
+                            Restart Experience
+                        </button>
+                        <button id="replayBtn" class="action-btn">
+                            <i class="fas fa-heart"></i>
+                            Replay Animations
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Confetti Container -->
+            <div id="confettiContainer" class="confetti-container"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
